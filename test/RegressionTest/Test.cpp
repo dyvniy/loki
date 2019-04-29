@@ -51,17 +51,17 @@ Test::tests_type Test::tests;
 #include "TypeManipTest.h"
 #include "TypeTraitsTest.h"
 #include "TypeTraitsTest2.h"
-#include "SmartPtrTest.h"
+//#include "SmartPtrTest.h"
 #include "FactoryTest.h"
 #include "FactoryParmTest.h"
 #include "AbstractFactoryTest.h"
 #include "FunctorTest.h"
 #include "DataGeneratorsTest.h"
-#include "AssocVectorTest.h"
+//#include "AssocVectorTest.h"
 
 int main()
 {
-    int result = Test::run("Loki Unit Test");
+	int result = Test::run("Loki Unit Test");
 
 #if defined(__BORLANDC__) || defined(_MSC_VER)
     system("PAUSE");

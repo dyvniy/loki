@@ -21,6 +21,7 @@
 // See Alexandrescu, Andrei: Type-safe Formatting, C/C++ Users Journal, Aug 2005
 ////////////////////////////////////////////////////////////////////////////////
 
+#include <algorithm>
 #include <cstdio>
 #include <climits>
 #include <string>
@@ -207,7 +208,7 @@ namespace Loki
                 result_ = -1;
                 return *this;
             }
-			const size_t len = std::min(std::strlen(s), prec_);
+			const size_t len = std::min<size_t>(std::strlen(s), prec_);
             if (width_ > len) {
                 if (LeftJustify()) {
                     Write(s, s + len);
